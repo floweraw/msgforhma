@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Protection</title>
+</head>
+<body>
+
+<h2>Enter Password to Access Website</h2>
+
+<form id="passwordForm" onsubmit="validatePassword(); return false;">
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validatePassword() {
+  var password = document.getElementById("password").value;
+  // Replace "YourPasswordHere" with your actual password
+  if (password === "youFoundit ") {
+    window.location.href = "Untitled.txt";
+  } else {
+    window.location.href = "not.txt";
+  }
+}
+</script>
+
+</body>
+</html>
